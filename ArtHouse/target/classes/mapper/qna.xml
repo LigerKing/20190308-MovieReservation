@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="qna">
+
+	<select id="selectOne" parameterType="qnaDTO" resultMap="rs">
+		SELECT * FROM QnA WHERE TITLE = #{TITLE}
+	</select>
+	
+	<!-- 컬럼과. -->
+	<resultMap type="qnaDTO" id="rs">
+		<result property="informationConsent" column="informationConsent"/>
+		<result property="name" column="name"/>
+		<result property="tel" column="tel"/>
+		<result property="areaSelectBox" column="areaSelectBox"/>
+		<result property="email" column="email"/>
+		<result property="selectMovieTheater" column="selectMovieTheater"/>
+		<result property="questionType" column="questionType"/>
+		<result property="contents" column="contents"/>
+		<result property="attachments" column="attachments"/>
+	</resultMap>
+
+
+
+	<select id="selectCountList" resultMap="rs">
+		SELECT * FROM
+	          (SELECT ROWNUM AS rn, A.* FROM (SELECT * FROM QnA) A )
+	      WHERE rn BETWEEN #{start} AND #{end}
+	</select>
+
+		
+	<!-- 전체목록 -->
+	<select id="selectAll" resultMap="rs">
+		SELECT * FROM QnA
+	</select>
+	
+	<!-- 생성 -->
+	<insert id="insert" parameterType="qnaDTO">
+		<!-- INSERT INTO QnA VALUES(#{informationConsent},#{name},#{tel},#{email},#{areaSelectBox},#{selectMovieTheater},#{questionType},#{title},#{contents},#{attachments}) -->
+	
+		INSERT INTO QnA(informationconsent,name,tel,email,areaselectbox,selectmovietheater,questiontype,title,contents,attachments) 
+		VALUES(#{informationConsent, jdbcType=VARCHAR},#{name, jdbcType=VARCHAR},#{tel, jdbcType=VARCHAR},#{email, jdbcType=VARCHAR},#{areaSelectBox, jdbcType=VARCHAR},#{selectMovieTheater, jdbcType=VARCHAR},#{questionType, jdbcType=VARCHAR},#{title, jdbcType=VARCHAR},#{contents, jdbcType=VARCHAR},#{attachments, jdbcType=VARCHAR})
+	</insert>
+
+	<!-- 수정 -->
+	<update id="update" parameterType="qnaDTO">
+		UPDATE QnA SET title = #{title}  WHERE titleNo = #{titleNo}
+	</update>
+	<!-- 삭제 -->
+	<delete id="delete" parameterType="qnaDTO">
+		DELETE FROM QnA WHERE TITLE = #{TITLE}
+	</delete>
+
+</mapper>

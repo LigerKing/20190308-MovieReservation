@@ -1,0 +1,283 @@
+@CHARSET "UTF-8";
+
+html, body
+{
+	height: 100%;
+}
+
+body
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: "Noto Sans KR", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-size: 16px;
+	font-weight: 300;
+	color: #333;
+	letter-spacing: -0.5px;
+	line-height: 1.4;
+}
+
+a
+{
+	text-decoration: none;
+	outline: none;
+	color: #333;
+	cursor: pointer;
+}
+
+ul, ol, dl, li, p
+{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+dl, dt, dd
+{
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+em
+{
+	font-style: normal;
+}
+
+/**************** 상단메뉴 *****************/
+header
+{
+	position: fixed;
+	height: 170px;
+	top: 0px;
+	width: 100%;
+	background-color: #fff;
+	border-bottom: 1px solid #f1f1f1;
+	z-index: 1000;
+}
+
+header .header-wrap
+{
+	width: 1000px;
+	position: relative;
+	margin: 0px auto;
+}
+
+header .header-wrap .top_logo
+{
+	position: absolute;
+	top: 12px;
+	width: 100%;
+	text-align: center;
+}
+
+/***** 상단 - 사용자 메뉴 *****/
+
+header .header-wrap .top_members
+{
+	position: absolute;
+	top: 0px;
+	width: 100%;
+}
+
+header .header-wrap .top_members ul
+{
+	overflow: hidden;
+	position: absolute;
+	right: 0px;
+}
+
+header .header-wrap .top_members ul li
+{
+	float: left;
+	border-left: none;
+}
+
+header .header-wrap .top_members ul li span
+{
+	display: inline-block;
+	width: 70px;
+	height: 16px;
+	text-align: center;
+	border-right: 1px solid #e5e5e5;
+}
+
+.member_menu
+{
+	display: inline-block;
+	overflow: hidden;
+	margin-top: 15px;
+	font-weight: 500;
+	font-size: 12px;
+}
+
+/***** 상단 - 메인 메뉴 *****/
+header .header-wrap .header-menu
+{
+	position: relative;
+	top: 130px;
+	height: 40px;
+	border-top: 1px dotted #f1f1f1;
+}
+
+header .header-wrap .header-menu ul
+{
+	overflow: hidden;
+	position: absolute;
+	right: 0px;
+}
+
+header .header-wrap .header-menu ul li
+{
+	float: left;
+	border-left: none;
+}
+
+header .header-wrap .header-menu ul li span
+{
+	display: inline-block;
+	width: 250px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+
+header .header-wrap .header-menu ul li span:HOVER
+{
+	background-color: #000;
+	color: #fff;
+}
+
+.main_menu
+{
+	display: inline-block;
+	overflow: hidden;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+/**************** 내용출력 페이지바디 *****************/
+.page-body
+{
+	position: relative;
+	top: 170px;
+	bottom: 0px;
+}
+
+.main-context
+{
+	width: 1000px;
+	position: relative;
+	margin: 0px auto;
+}
+
+.center-context
+{
+	text-align: center;
+}
+
+.this-menu
+{
+	line-height: 50px;
+	background-color: #f2f2f2;
+	border-bottom: 2px solid #333;
+<<<<<<< HEAD
+	margin-bottom: 80px;
+}
+
+.this-menu .cur-info
+{
+	line-height: 50px;
+	font-weight: 400;
+	font-size: 15px;
+}
+
+.this-menu a
+{
+	color: #777;
+}
+
+.this-menu a span
+{
+	padding: 0 5px 0 5px;
+}
+
+.this-menu .current-page
+{
+	color: #000;
+	font-weight: 600;
+}
+
+/**************** 좌측 서브메뉴 *****************/
+.col-aside
+{
+	float: left;
+	width: 160px;
+}
+
+.col-aside ul li
+{
+	border-top: 1px solid #bbb9b1;
+	margin-bottom: 10px;
+}
+
+.col-aside ul li a
+{
+	width: 155px;
+	height: 34px;
+	padding-left: 5px;
+	color: #222;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 34px;
+	display: block;
+	position: relative;
+}
+
+.col-aside ul li a:hover
+{
+	background-color: #000;
+	color: #fff;
+}
+
+/**************** 우측 메인컨텐츠 *****************/
+.col-detail
+{
+	float: right;
+	position: relative;
+	width: 800px;
+	margin-bottom: 80px;
+=======
+>>>>>>> branch 'master' of https://github.com/hwi94/ArtHouse
+}
+
+/**************** 하단메뉴 *****************/
+#footer
+{
+	clear: both;
+	width: 100%;
+	margin-top: 100px;
+	background-color: #221f1f;
+	bottom: 0px;
+}
+
+#footer .bottom-wrap
+{
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+	padding: 30px 0 40px;
+	color: #999;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+#footer-text2
+{
+	position: absolute;
+	right: 0;
+	bottom: 40px;
+}
